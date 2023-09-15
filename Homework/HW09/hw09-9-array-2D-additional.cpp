@@ -62,7 +62,12 @@ int main () {
     printf ( "Array1 + Array2 = Array3\n" ) ;
     for ( int i = 0 ; i < row ; i++ ) {
         for ( int k = 0 ; k < column ; k++ ) {
-            printf ( "%d ", array3[ i ] [ k ] ) ;
+            printf ( "%d", array3[ i ] [ k ] ) ;
+            // ทำให้ช่องหลังไม่เว้นวรรค
+            if ( column > k - 1 ) {
+                printf ( " " ) ;
+            }
+            
         } // end for
         printf ( "\n" ) ;
     } // end for
